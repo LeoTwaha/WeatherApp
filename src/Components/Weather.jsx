@@ -55,7 +55,7 @@ export default function Weather({setCity, setCoords, data, city, refresh}){
 function getLocation(e){
     navigator.geolocation.getCurrentPosition( async  (pos) => {
       console.log(`lat: ${pos.coords.latitude}, lng: ${pos.coords.longitude}` );
-      const res = await fetch(`http://api.geonames.org/findNearbyPlaceNameJSON?lat=${pos.coords.latitude}&lng=${pos.coords.longitude}&username=leo_twaha`);
+      const res = await fetch(`https://api.geonames.org/findNearbyPlaceNameJSON?lat=${pos.coords.latitude}&lng=${pos.coords.longitude}&username=leo_twaha`);
       const placeNames = await res.json();
       console.log(`placenames: ${JSON.stringify(placeNames)}`)
       setCoords({lat: pos.coords.latitude, lng: pos.coords.longitude});
