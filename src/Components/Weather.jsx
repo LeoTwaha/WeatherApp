@@ -42,7 +42,7 @@ export default function Weather({setCity, setCoords, data, city, refresh}){
       } else if(deg >= 247.5 && deg < 292.5){
         return 'W';
       } else {
-        return 'NW'
+        return 'NW' 
       }
     
   }
