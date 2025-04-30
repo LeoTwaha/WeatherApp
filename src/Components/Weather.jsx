@@ -15,9 +15,9 @@ export default function Weather({setCity, setCoords, data, city, refresh}){
       if (num <= 2){
         return 'Low';
       } else if(num <= 5){
-        return 'High';
+        return 'Moderate';
       } else if(num <= 7){
-        return 'Very High';
+        return 'High';
       } else if(num <= 10){
         return 'Very High';
       } else{
