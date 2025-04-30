@@ -13,7 +13,7 @@ function App() {
   const searchDialog = document.getElementById('search');
   const getCites = async (input) => {
     try{
-    const citesRes = await fetch(`https://api.geonames.org/searchJSON?name_startsWith=${input}&maxRows=10&username=leo_twaha&orderby=relevance`);
+    const citesRes = await fetch(`https://infinite-savannah-17951-8588afb749a5.herokuapp.com/http://api.geonames.org/searchJSON?name_startsWith=${input}&maxRows=10&username=leo_twaha&orderby=relevance`);
     const cites = await citesRes.json();
     let citesArr = [];
     console.log(cites);
