@@ -128,7 +128,7 @@ function getLocation(e){
          <div id="wind-info">
          {weather.current.wind_speed && <p className="w-info">Wind {Math.round(weather.current.wind_speed)} mph</p>}
          {weather.current.wind_gust && <p className="w-info">Gusts {Math.round(weather.current.wind_gust)} mph</p>}
-         {weather.current.wind_deg && <p className="w-info">Direction {Math.round(weather.current.wind_deg)}° {degToCardinal(weather.current.wind_deg)}</p>}
+         {weather.current.wind_deg !== null && weather.current.wind_deg !== undefined && <p className="w-info">Direction {Math.round(weather.current.wind_deg)}° {degToCardinal(weather.current.wind_deg)}</p>}
          </div>
        </div>
        <div className="info" id="humdity">
